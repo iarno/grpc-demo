@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+option go_package = ".;proto";
+
+service Demo {
+  rpc GetData(DemoReq) returns (DemoRsp){}
+}
+
+message DemoReq {
+  string a = 1; // 请求参数a
+}
+
+message DemoRsp{
+  string rel = 1; // 返回参数值
+}
